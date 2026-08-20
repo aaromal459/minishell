@@ -58,7 +58,7 @@ int main()
 
     sa.sa_handler=signal_handler;
     sigemptyset(&sa.sa_mask);
-    sa.sa_flags=0;
+    sa.sa_flags= SA_RESTART;
     struct sigaction sa_chld;
     
     sa_chld.sa_handler = sigchld_handler;
