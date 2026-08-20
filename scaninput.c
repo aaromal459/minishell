@@ -99,7 +99,10 @@ void scan_input(char *prompt,char *cmd)
                 continue;
             }
             else
+			{
                 strcpy(prompt,&cmd[4]);
+				continue;
+			}
         }
         char *str=get_command(cmd);
 
